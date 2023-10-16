@@ -16,8 +16,13 @@ Changed README to include more information such as the project's ultimate final 
 
 [from_pretrained help](https://huggingface.co/docs/diffusers/using-diffusers/loading)
 
-<<<<<<< HEAD
-Worked on code to utilize model as the previous code was not working despite no major errors occuring. (The model was not found)
+Worked on new code to utilize model following hugging face's official from_pretrained guide. Previous code was not working due to no model found. Hugging Face's online API seems to be the best (and likely only) way to utilize the model although using it through python code has proved very difficult. I think it will be my main path forward.
+
+The following is an image of the error I am currently recieving: 
+
+<img src="model_nf.PNG" width="800">
+
+I believe this error is coming from my avoidance of the hugging face API for online Stable Diffusion models. It seems I have no other choice than to access the repositories held on the site instead of using a local model.
 
 ## 10-12-2023 
 
@@ -27,7 +32,7 @@ Successfully initialized the model and prompt, but ran into an error when trying
 
 Added code that can tokenize a prompt and print those tokens with their english counterparts.
 
-Installed libraries fast download matplotlib using pip
+Installed libraries fastdownload matplotlib using pip
 
 Added code that can perform VAE compression on an image and it seemed to work, at least in the backend side of things, despite some runtime warnings. There is currently no way to actually view this image as it is not compatible with cv2 in its current form so I will need to add some method of viewing the image. Following is the response the code gives when ran, showing that the program is working in theory:
 
@@ -36,15 +41,5 @@ Added code that can perform VAE compression on an image and it seemed to work, a
 ## 10-16-2023
 
 Separated the code into its different functionalities, specifically made a new file for the token test code because it is not used in vae_compression.py but may be needed later down the line.
-=======
-Worked on new code to utilize model following hugging face's official from_pretrained guide. Previous code was not working due to no model found. Hugging Face's online API seems to be the best (and likely only) way to utilize the model although using it through python code has proved very difficult. I think it will be my main path forward.
 
-The following is an image of the error I am currently recieving:
 
-<img src="Error1.PNG" width="800">
-
-I believe this error is coming from my avoidance of the hugging face API but I think I have no other choice than to access the repositories held on the site instead of using local files.
-
-## 10-3-2023
-
->>>>>>> 1f94334f565a5c8025e6a32fb6c55fd3cb02531a

@@ -5,10 +5,9 @@ Using Stable Diffusion's Variational Autoencoders for Image Compression.
 
 This project is currently a work in progress.
 
-The ultimate goal of this project is to be able to compress images while maintaining the same quality of the original image while avoiding the introduction of artifacts.
+The ultimate goal of this project is to be able to compress images while maintaining the same quality of the original image and avoiding the introduction of artifacts.
 
-RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, specifically the lower storage pruned-emaonly weight.
-
+RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, specifically the lower storage-intensive 'pruned-emaonly' weight.
 
 # Features
 - Img2img compression
