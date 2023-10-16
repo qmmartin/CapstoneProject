@@ -6,7 +6,7 @@ The project goal for today was to start implementing the VAE code while using th
 
 Installed essential libraries Pytorch, Diffusers, and Transformers to python environment.
 
-Wrote code that initializes a prompt and generates an image using it.
+Wrote code that initializes a prompt and generates an image using it, although i met an error in that the model cannot be found.
 
 Changed README to include more information such as the project's ultimate final goal.
 
@@ -16,6 +16,7 @@ Changed README to include more information such as the project's ultimate final 
 
 [from_pretrained help](https://huggingface.co/docs/diffusers/using-diffusers/loading)
 
+<<<<<<< HEAD
 Worked on code to utilize model as the previous code was not working despite no major errors occuring. (The model was not found)
 
 ## 10-12-2023 
@@ -35,3 +36,15 @@ Added code that can perform VAE compression on an image and it seemed to work, a
 ## 10-16-2023
 
 Separated the code into its different functionalities, specifically made a new file for the token test code because it is not used in vae_compression.py but may be needed later down the line.
+=======
+Worked on new code to utilize model following hugging face's official from_pretrained guide. Previous code was not working due to no model found. Hugging Face's online API seems to be the best (and likely only) way to utilize the model although using it through python code has proved very difficult. I think it will be my main path forward.
+
+The following is an image of the error I am currently recieving:
+
+<img src="Error1.PNG" width="800">
+
+I believe this error is coming from my avoidance of the hugging face API but I think I have no other choice than to access the repositories held on the site instead of using local files.
+
+## 10-3-2023
+
+>>>>>>> 1f94334f565a5c8025e6a32fb6c55fd3cb02531a
