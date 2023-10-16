@@ -5,22 +5,23 @@ Using Stable Diffusion's Variational Autoencoders for Image Compression.
 
 This project is currently a work in progress.
 
-The ultimate goal of this project is to be able to compress image sizes while maintaining the same quality of the original image.
+The ultimate goal of this project is to be able to compress images while maintaining the same quality of the original image while avoiding the introduction of artifacts.
 
-This script will work on most Stable Diffusion UIs, however [Automatic1111](https://github.com/AUTOMATIC1111/stable-diffusion-webui) was utilized for the purposes of this project.
+RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, specifically the lower storage pruned-emaonly weight.
 
 
 # Features
-- Img2img image compression
+- Img2img compression
 - File size reduction 
+- Image enhancement
 
 # Credits 
-Automatic1111 - https://github.com/AUTOMATIC1111/stable-diffusion-webui
-
 VAE Example Image - https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8
 
 Diffusers Library - https://github.com/huggingface/diffusers
 
 Transformers Library - https://github.com/huggingface/transformers
+
+
 
 
