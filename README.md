@@ -1,7 +1,7 @@
 # Capstone Science Fair Project
 Using Stable Diffusion's Variational Autoencoders for Image Compression.
 
-<img src="vae_example.png" width="800">
+<img src="Images\vae_example.png" width="800">
 
 This project is currently a work in progress.
 
@@ -15,11 +15,16 @@ RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, 
 - Image enhancement
 
 # Credits 
+## Images
 VAE Example Image - https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8
 
+VAE Test Image - https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg
+
+## Libraries
 Diffusers Library - https://github.com/huggingface/diffusers
 
 Transformers Library - https://github.com/huggingface/transformers
+
 
 
 

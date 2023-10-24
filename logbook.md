@@ -20,7 +20,7 @@ Worked on new code to utilize model following hugging face's official from_pretr
 
 The following is an image of the error I am currently recieving: 
 
-<img src="model_nf.PNG" width="800">
+<img src="Images\model_nf.PNG" width="800">
 
 I believe this error is coming from my avoidance of the hugging face API for online Stable Diffusion models. It seems I have no other choice than to access the repositories held on the site instead of using a local model.
 
@@ -36,10 +36,20 @@ Installed libraries fastdownload matplotlib using pip
 
 Added code that can perform VAE compression on an image and it seemed to work, at least in the backend side of things, despite some runtime warnings. There is currently no way to actually view this image as it is not compatible with cv2 in its current form so I will need to add some method of viewing the image. Following is the response the code gives when ran, showing that the program is working in theory:
 
-<img src="functional.PNG" width="800">
+<img src="Images\functional.PNG" width="800">
 
 ## 10-16-2023
 
 Separated the code into its different functionalities, specifically made a new file for the token test code because it is not used in vae_compression.py but may be needed later down the line.
+
+Attempted creating code that would show the image, and it did show an image, but I believe the pixels are being altered in some way as the result is just greyscale squares.
+
+## 10-24-2023
+
+Worked on code that would successfully display the compressed images and it works!
+
+Compressed latents:
+
+<img src="Images\vae_success.PNG" width="800">
 
 
