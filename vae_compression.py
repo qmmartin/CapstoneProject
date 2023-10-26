@@ -84,17 +84,23 @@ print(f"Dimension of this latent representation: {latent_img.shape}")
 #     print(f"Channel {c}: Min={img.min()}, Max={img.max()}")
 img2=np.array(img)
 fig, axs = plt.subplots(1, 4, figsize=(16, 4))
+stacked_images = []
 for c in range(4):
     img = latent_img[0, c, :, :].detach().cpu()
     img = (img - img.min()) / (img.max() - img.min())  # Normalize to [0, 1]
     axs[c].imshow(img, cmap='Greys')
     axs[c].axis('off')
+    stacked_images.append((img * 255).numpy().astype('uint8'))
 plt.show()
+
+# Horizontally stack the images
+stacked_image = np.hstack(stacked_images)
+cv2.imwrite("vae_success.png", stacked_image)
 
 decoded_img = latents_to_np(latent_img)
 # decoded_img[0]
 # show(decoded_img)
-np_img = np_img[:,:,::-1] # Fix BGR weirdness
+np_img = img2[:,:,::-1] # Fix BGR weirdness
 stacked_img = np.hstack((np_img, decoded_img))
 show(stacked_img)
 
