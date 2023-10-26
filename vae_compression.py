@@ -82,7 +82,7 @@ print(f"Dimension of this latent representation: {latent_img.shape}")
 # for c in range(4):
 #     img = latent_img[0, c, :, :].detach().cpu()
 #     print(f"Channel {c}: Min={img.min()}, Max={img.max()}")
-
+img2=np.array(img)
 fig, axs = plt.subplots(1, 4, figsize=(16, 4))
 for c in range(4):
     img = latent_img[0, c, :, :].detach().cpu()
@@ -94,7 +94,6 @@ plt.show()
 decoded_img = latents_to_np(latent_img)
 # decoded_img[0]
 # show(decoded_img)
-np_img = np.array(img)
 np_img = np_img[:,:,::-1] # Fix BGR weirdness
 stacked_img = np.hstack((np_img, decoded_img))
 show(stacked_img)
