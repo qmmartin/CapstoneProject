@@ -52,4 +52,14 @@ Compressed latents:
 
 <img src="Images\vae_success.PNG" width="800">
 
+## 10-26-2023 
+
+Created code in vae_compression that would decompress the latent representation using Stable Diffusion 1.5's VAE.
+
+It works but the images are slightly off as the variation from the AI alters the image slightly.
+
+<img src="Images\comparison_img.PNG" width="800">
+
+As you can probably tell in this photo, the squirrels look very similar, but they are slightly different, some notable differences include the glimmer on the eye, as well as many of the hairs on the tail and ears.
+
 
