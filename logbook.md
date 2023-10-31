@@ -62,4 +62,15 @@ It works but the images are slightly off as the variation from the AI alters the
 
 As you can probably tell in this photo, the squirrels look very similar, but they are slightly different, some notable differences include the glimmer on the eye, as well as many of the hairs on the tail and ears.
 
+## 10-30-2023
+My current plan is to try to change the rate at which the image is compressed and see if the compression rate alters the output image.
 
+The method I am using to test the quality is an FR-IQA or a Full Reference Image Quality Assessment which compares 2 images by feeding it a distorted image and the original image. More specifically, I am using ssim from scikit-image.
+
+Installed scikit-image to perform friqa on images
+
+TO DO LIST
+- Modularize code
+- Image compression metrics
+
+After Modularizing vae_compression.py into a new file vae_module.py, the code ultimately works nearly the same, however the output latent_rep has the black and white values inverted for some reason and I will have to fix this bug.
