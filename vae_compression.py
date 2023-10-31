@@ -95,7 +95,7 @@ plt.show()
 
 # Horizontally stack the images
 stacked_image = np.hstack(stacked_images)
-cv2.imwrite("vae_success.png", stacked_image)
+cv2.imwrite("output/vae_success.png", stacked_image)
 
 decoded_img = latents_to_np(latent_img)
 # decoded_img[0]
@@ -106,8 +106,8 @@ show(stacked_img)
 
 show(normalize(np_img-decoded_img))
 
-cv2.imwrite("Images/comparison_img.png", stacked_img)
-cv2.imwrite("Images/np_img.png", np_img)
-cv2.imwrite("Images/decoded_img.png", decoded_img)
+cv2.imwrite("output/comparison_img.png", stacked_img)
+cv2.imwrite("output/np_img.png", np_img)
+cv2.imwrite("output/decoded_img.png", decoded_img)
 
 

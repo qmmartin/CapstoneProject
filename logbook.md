@@ -74,3 +74,15 @@ TO DO LIST
 - Image compression metrics
 
 After Modularizing vae_compression.py into a new file vae_module.py, the code ultimately works nearly the same, however the output latent_rep has the black and white values inverted for some reason and I will have to fix this bug.
+
+## 10-31-2023
+I fixed the bug where the latent_rep image was inverted. Modularized friqa_module successfully.
+
+
+Test Images: 
+
+https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg
+
+TO DO LIST 
+- Image Compression Metrics
+- Alter Compression Rate of Image

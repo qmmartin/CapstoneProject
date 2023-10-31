@@ -100,7 +100,7 @@ def matplot_create(latent_img):
         img = (img - img.min()) / (img.max() - img.min())  # Normalize to [0, 1]
         axs[c].imshow(img, cmap='Greys')
         axs[c].axis('off')
-        unstacked_images.append((img * 255).numpy().astype('uint8'))
+        unstacked_images.append(255 - (img * 255).numpy().astype('uint8'))
     return(unstacked_images)
 
 # Shows a matplot
