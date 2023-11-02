@@ -7,7 +7,6 @@ from diffusers import AutoencoderKL
 from fastdownload import FastDownload  
 from torchvision import transforms as tfms
 
-
 # Debug functions
 
 # Tests the dimensions of an image and prints them
@@ -150,6 +149,35 @@ def pil_to_np(pil_image):
     np_array = np.array(pil_image)
     np_array = np_array[:,:,::-1]
     return np_array
+
+
+count=0
+
+# Other functions
+
+def compress_and_save(link):
+    global count
+    img = load_img(link)
+    latent_img = pil_to_latents(img)
+    np_img = pil_to_np(img)
+
+    unstacked_images = matplot_create(latent_img)
+
+    decoded_img = latents_to_np(latent_img)
+    stacked_img = restack(unstacked_images)
+    compare_img = side_by_side(np_img, decoded_img)
+
+    count = count+1
+
+    img1 = (f"output/latent_rep{count:02}.png")
+    img2 = (f"output/comparison_img{count:02}.png")
+    img3 = (f"output/np_img{count:02}.png")
+    img4 = (f"output/decoded_img{count:02}.png")
+
+    cv2.imwrite(img1, stacked_img)
+    cv2.imwrite(img2, compare_img)
+    cv2.imwrite(img3, np_img)
+    cv2.imwrite(img4, decoded_img)
 
 
 

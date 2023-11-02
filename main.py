@@ -9,28 +9,33 @@ from vae_module import (
     matplot_show,
     restack,
     side_by_side,
+    compress_and_save,
 )
 from friqa_module import (
     ssim_iqa,
 )
 
-img_link = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg'
 
-img = load_img(img_link)
-latent_img = pil_to_latents(img)
-np_img = pil_to_np(img)
+link = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg'
 
-unstacked_images = matplot_create(latent_img)
-# matplot_show()
+compress_and_save(link)
 
-decoded_img = latents_to_np(latent_img)
-stacked_img = restack(unstacked_images)
-compare_img = side_by_side(np_img, decoded_img)
 
-cv2.imwrite("output/latent_rep.png", stacked_img)
-cv2.imwrite("output/comparison_img.png", compare_img)
-cv2.imwrite("output/np_img.png", np_img)
-cv2.imwrite("output/decoded_img.png", decoded_img)
+# img = load_img(link)
+# latent_img = pil_to_latents(img)
+# np_img = pil_to_np(img)
 
-ssim_iqa(np_img, decoded_img)
+# unstacked_images = matplot_create(latent_img)
+# # matplot_show()
+
+# decoded_img = latents_to_np(latent_img)
+# stacked_img = restack(unstacked_images)
+# compare_img = side_by_side(np_img, decoded_img)
+
+# cv2.imwrite("output/latent_rep.png", stacked_img)
+# cv2.imwrite("output/comparison_img.png", compare_img)
+# cv2.imwrite("output/np_img.png", np_img)
+# cv2.imwrite("output/decoded_img.png", decoded_img)
+
+# ssim_iqa(np_img, decoded_img)
 
