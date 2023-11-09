@@ -16,26 +16,18 @@ from friqa_module import (
 )
 
 
-link = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg'
+animal_link = 'https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg'
+cityscape_link = 'https://upload.wikimedia.org/wikipedia/commons/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg'
+text_link = 'https://upload.wikimedia.org/wikipedia/commons/d/df/Neon.JPG'
+art_link = 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Van_Gogh_-_Starry_Night_2.jpg'
+sax_link = 'https://upload.wikimedia.org/wikipedia/commons/e/e6/Alto_saxophone-E_1685-IMG_7092-gradient.jpg'
 
-compress_and_save(link)
+compress_and_save(animal_link)
+compress_and_save(cityscape_link)
+compress_and_save(text_link)
+compress_and_save(art_link)
+compress_and_save(sax_link)
 
-
-# img = load_img(link)
-# latent_img = pil_to_latents(img)
-# np_img = pil_to_np(img)
-
-# unstacked_images = matplot_create(latent_img)
-# # matplot_show()
-
-# decoded_img = latents_to_np(latent_img)
-# stacked_img = restack(unstacked_images)
-# compare_img = side_by_side(np_img, decoded_img)
-
-# cv2.imwrite("output/latent_rep.png", stacked_img)
-# cv2.imwrite("output/comparison_img.png", compare_img)
-# cv2.imwrite("output/np_img.png", np_img)
-# cv2.imwrite("output/decoded_img.png", decoded_img)
 
 # ssim_iqa(np_img, decoded_img)
 

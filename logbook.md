@@ -86,3 +86,13 @@ https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg
 TO DO LIST 
 - Image Compression Metrics
 - Alter Compression Rate of Image
+
+
+## 11-2-2023
+Made the code in main.py repeatable by turning it into a function within vae_module.py. Now the code can be run multiple times with different images easily.
+
+## 11-7-2023
+Used the newly made function to perform compression on multiple images of different types.
+
+#### Image Sources:
+[animal_link](https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg), [cityscape_link](https://upload.wikimedia.org/wikipedia/commons/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg), [text_link](https://upload.wikimedia.org/wikipedia/commons/d/df/Neon.JPG), [art_link](https://upload.wikimedia.org/wikipedia/commons/a/aa/Van_Gogh_-_Starry_Night_2.jpg), [sax_link](https://upload.wikimedia.org/wikipedia/commons/e/e6/Alto_saxophone-E_1685-IMG_7092-gradient.jpg)
