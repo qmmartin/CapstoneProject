@@ -45,12 +45,18 @@ def load_vae():
 
 # Loads an image from the web
 def load_image(p):
-   return Image.open(p).convert('RGB').resize((512,512))
+   return Image.open(p).convert('RGB')
 
 # Downloads an image from a given URL
 def load_img(link):
     p = FastDownload().download(link)
     img = load_image(p)
+    return(img)
+
+# Loads an image from path
+def load_np(path):
+    img = cv2.imread(path)
+    img = img[:,:,::-1]
     return(img)
 
 
@@ -111,12 +117,24 @@ def matplot_show():
 
 # Conversion Functions
 
+# Converts an image from a numpy array to a PIL format
+def np_to_pil(image):
+    pil_image = Image.fromarray(image)
+    pil_image = pil_image.convert('RGB')
+    return pil_image
+
+# Converts an image from PIL to a NumPy array
+def pil_to_np(pil_image):
+    np_array = np.array(pil_image)
+    np_array = np_array[:,:,::-1]
+    return np_array
+
 # Converts an image from PIL to latent representation
 def pil_to_latents(image):   
     vae = load_vae()
     init_image = tfms.ToTensor()(image).unsqueeze(0) * 2.0 - 1.0   
     init_image = init_image.to(device="cuda", dtype=torch.float32)
-    init_latent_dist = vae.encode(init_image).latent_dist.sample() * 0.18215     
+    init_latent_dist = vae.encode(init_image).latent_dist.sample() * 0.18215 # Inverse standard deviation of image latents
     return init_latent_dist  
 
 # Converts an image from latent representation to PIL
@@ -144,20 +162,13 @@ def latents_to_np(latents):
     image = image[:,:,::-1] # Fix Numpy's BGR weirdness
     return image
 
-# Converts an image from PIL to a NumPy array
-def pil_to_np(pil_image):
-    np_array = np.array(pil_image)
-    np_array = np_array[:,:,::-1]
-    return np_array
-
 
 count=0
 
 # Other functions
 
-def compress_and_save(link):
+def compress_and_save(img):
     global count
-    img = load_img(link)
     latent_img = pil_to_latents(img)
     np_img = pil_to_np(img)
 

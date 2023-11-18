@@ -96,3 +96,20 @@ Used the newly made function to perform compression on multiple images of differ
 
 #### Image Sources:
 [animal_link](https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg), [cityscape_link](https://upload.wikimedia.org/wikipedia/commons/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg), [text_link](https://upload.wikimedia.org/wikipedia/commons/d/df/Neon.JPG), [art_link](https://upload.wikimedia.org/wikipedia/commons/a/aa/Van_Gogh_-_Starry_Night_2.jpg), [sax_link](https://upload.wikimedia.org/wikipedia/commons/e/e6/Alto_saxophone-E_1685-IMG_7092-gradient.jpg)
+
+
+## 11-9-2023
+Worked on procedures and created graphics of the VAE process for use in my procedures.
+
+## 11-13-2023
+Worked on procedures and researched new methods of FR-IQA, namely Strutural Similarity Index (SSI), Peak Signal-to-Noise-Ratio (PSNR), and Mean Squared Error (MSE).
+
+## 11-14-2023
+Finished rough draft of procedures and fine-tuned graphics of different functions of the code.
+
+## 11-16-2023
+Created functions to help work with different types of images that were previously unusable in the code, namely PNG and JPEG.
+
+Altered compress_and_save() to be able to use images instead of links that way numpy arrays can be used instead of strictly downloaded PILs.
+
+Currently attempting to remove all resizing from the code to be able to work with any images I would like to but pil_to_latents or latents_to_np appears to be changing the size of the image.
