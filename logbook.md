@@ -113,3 +113,18 @@ Created functions to help work with different types of images that were previous
 Altered compress_and_save() to be able to use images instead of links that way numpy arrays can be used instead of strictly downloaded PILs.
 
 Currently attempting to remove all resizing from the code to be able to work with any images I would like to but pil_to_latents or latents_to_np appears to be changing the size of the image.
+
+## 11-27-2023
+Began working on intro to my paper. Researched image compression and it's importance as well as the basics of VAEs.
+
+## 11-28-2023
+Continued work on the introduction to my paper. Continued researching image compression as well as VAEs.
+
+## 11-30-2023
+Continued work on introduction to paper. Looked into possible avenues of altering compression quality/ratio for a human testing application on perceived quality vs objective quality.
+
+## 12-5-2023
+Continued work on introduction. Found an equation P(X)=∫P(X∣z;θ)P(z)dz that represents the fundamental concept of probabilistic generative modeling, or the back-end of VAEs. If I can get to this equation I can alter theta which would change the compression quality or ratio in some way.
+
+## 12-7-2023
+Continued work on introduction. 

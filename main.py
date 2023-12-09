@@ -32,7 +32,6 @@ art_img = load_img(art_link)
 sax_img = load_img(sax_link)
 # hand_img = load_img(hand_link)
 
-
 compress_and_save(animal_img)
 compress_and_save(cityscape_img)
 compress_and_save(text_img)
