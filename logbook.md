@@ -128,3 +128,7 @@ Continued work on introduction. Found an equation P(X)=∫P(X∣z;θ)P(z)dz that
 
 ## 12-7-2023
 Continued work on introduction. 
+
+## 12-11-2023
+Changed code to be more seamless and work better with different image types than PIL. Also added back output images that were removed from prior iterations of the files on accident.
+Now I plan to make "scalar" be a parameter of compress_and_save that alters all existences of "scale_factor."
