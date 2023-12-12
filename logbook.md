@@ -132,3 +132,4 @@ Continued work on introduction.
 ## 12-11-2023
 Changed code to be more seamless and work better with different image types than PIL. Also added back output images that were removed from prior iterations of the files on accident.
 Now I plan to make "scalar" be a parameter of compress_and_save that alters all existences of "scale_factor."
+Successfully converted code to be able to handle different scalars, however the image quality seems to drop depending on how far away the scalar is from the original scalar or 0.18215. Because of this, I will need to find another way to alter image quality or compression rate.

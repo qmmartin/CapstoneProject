@@ -8,7 +8,7 @@ from fastdownload import FastDownload
 from torchvision import transforms as tfms
 
 
-scale_factor = 0.18215 # Scale factor of the original stable diffusion training
+
 
 # Debug functions
 
@@ -92,8 +92,6 @@ def restack(unstacked_images):
 
 # Horizontally stacks two separate images
 def side_by_side(img, img2):
-    print(img.shape)
-    print(img2.shape)
     images = [img, img2]
     sbs = np.hstack(images)
     return(sbs)
@@ -137,22 +135,20 @@ def pil_to_np(pil_image):
     return np_array
 
 # Converts an image from PIL to latent representation
-def pil_to_latents(image):   
+def pil_to_latents(image, scalar):   
     vae = load_vae()
     init_image = tfms.ToTensor()(image).unsqueeze(0) * 2.0 - 1.0   
     init_image = init_image.to(device="cuda", dtype=torch.float32)
-    init_latent_dist = vae.encode(init_image).latent_dist.sample() * scale_factor 
+    init_latent_dist = vae.encode(init_image).latent_dist.sample() * scalar
     return init_latent_dist  
 
 # Converts an image from latent representation to NumPy array
-def latents_to_np(latents):
+def latents_to_np(latents, scalar):
     vae = load_vae()
-    scale_factor = 0.18215
-    latents = (1 / scale_factor) * latents
-    print(latents.shape)
+    scalar = 0.18215
+    latents = (1 / scalar) * latents
     with torch.no_grad():
         image = vae.decode(latents).sample
-    print(image.shape)
     image = (image / 2 + 0.5).clamp(0, 1)
     image = image[0].detach().cpu().permute(1, 2, 0).numpy() * 255
     image = image.round().astype("uint8")
@@ -160,9 +156,9 @@ def latents_to_np(latents):
     return image
 
 # Converts an image from latent representation to PIL
-def latents_to_pil(latents): 
+def latents_to_pil(latents, scalar): 
     vae = load_vae()    
-    latents = (1 / scale_factor) * latents     
+    latents = (1 / scalar) * latents     
     with torch.no_grad():         
         image = vae.decode(latents).sample     
     
@@ -176,7 +172,7 @@ count=0
 
 # Other functions
 
-def compress_and_save(img):
+def compress_and_save(img, scalar):
     global count
 
     if not isinstance(img, Image.Image):
@@ -185,10 +181,10 @@ def compress_and_save(img):
 
     np_img = pil_to_np(img)
 
-    latent_img = pil_to_latents(img)
+    latent_img = pil_to_latents(img, scalar)
     unstacked_images = matplot_create(latent_img)
     
-    decoded_img = latents_to_np(latent_img)
+    decoded_img = latents_to_np(latent_img, scalar)
     stacked_img = restack(unstacked_images)
 
     compare_img = side_by_side(np_img, decoded_img)

@@ -32,12 +32,20 @@ art_img = load_img(art_link)
 sax_img = load_img(sax_link)
 # hand_img = load_img(hand_link)
 
-compress_and_save(animal_img)
-compress_and_save(cityscape_img)
-compress_and_save(text_img)
-compress_and_save(art_img)
-compress_and_save(sax_img)
+scalar1 = 0.18215
+compress_and_save(animal_img, scalar1)
+compress_and_save(cityscape_img, scalar1)
+compress_and_save(text_img, scalar1)
+compress_and_save(art_img, scalar1)
+compress_and_save(sax_img, scalar1)
 # compress_and_save(hand_img)
+
+# scalar2 = 0.16215
+# compress_and_save(animal_img, scalar2)
+# compress_and_save(cityscape_img, scalar2)
+# compress_and_save(text_img, scalar2)
+# compress_and_save(art_img, scalar2)
+# compress_and_save(sax_img, scalar2)
 
 
 # ssim_iqa(np_img, decoded_img)
