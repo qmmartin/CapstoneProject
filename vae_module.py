@@ -6,6 +6,11 @@ from PIL import Image
 from diffusers import AutoencoderKL
 from fastdownload import FastDownload  
 from torchvision import transforms as tfms
+from friqa_module import (
+    ssim_iqa,
+    mse_iqa,
+    psnr_iqa,
+)
 
 
 
@@ -37,7 +42,6 @@ def image_test(img):
     img_np = img_np[:,:,::-1]
     show(img_np)
 
-    d
 
 
 
@@ -201,5 +205,8 @@ def compress_and_save(img, scalar):
     cv2.imwrite(img3, np_img)
     cv2.imwrite(img4, decoded_img)
 
+    ssim_iqa(np_img, decoded_img)
+    mse_iqa(np_img, decoded_img)
+    psnr_iqa(np_img, decoded_img)
 
 

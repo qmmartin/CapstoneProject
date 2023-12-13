@@ -13,9 +13,6 @@ from vae_module import (
     compress_and_save,
     load_np,
 )
-from friqa_module import (
-    ssim_iqa,
-)
 
 
 animal_link = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/717px-Squirrel_posing.jpg'
@@ -30,7 +27,6 @@ cityscape_img = load_img(cityscape_link)
 text_img = load_img(text_link)
 art_img = load_img(art_link)
 sax_img = load_img(sax_link)
-# hand_img = load_img(hand_link)
 
 scalar1 = 0.18215
 compress_and_save(animal_img, scalar1)
@@ -38,15 +34,7 @@ compress_and_save(cityscape_img, scalar1)
 compress_and_save(text_img, scalar1)
 compress_and_save(art_img, scalar1)
 compress_and_save(sax_img, scalar1)
-# compress_and_save(hand_img)
-
-# scalar2 = 0.16215
-# compress_and_save(animal_img, scalar2)
-# compress_and_save(cityscape_img, scalar2)
-# compress_and_save(text_img, scalar2)
-# compress_and_save(art_img, scalar2)
-# compress_and_save(sax_img, scalar2)
 
 
-# ssim_iqa(np_img, decoded_img)
+
 
