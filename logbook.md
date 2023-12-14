@@ -135,3 +135,9 @@ Now I plan to make "scalar" be a parameter of compress_and_save that alters all 
 Successfully converted code to be able to handle different scalars, however the image quality seems to drop depending on how far away the scalar is from the original scalar or 0.18215. Because of this, I will need to find another way to alter image quality or compression rate.
 
 Added new functions to friqa_module.py that will perform MSE and PSNR FR-IQA on images respectively. Also moved those functions to vae_module.py for ease of access.
+
+## 12-13-23
+Started a draft of the data and results section of my paper and graphed the results of the FR-IQA methods for each image.
+
+## 12=14-23 
+Continued drafting data and results, added a line to vae_compression.py that will take the diff of the new and decoded image and save it.

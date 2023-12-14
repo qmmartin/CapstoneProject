@@ -104,10 +104,12 @@ np_img = img2[:,:,::-1] # Fix BGR weirdness
 stacked_img = np.hstack((np_img, decoded_img))
 show(stacked_img)
 
-show(normalize(np_img-decoded_img))
+diff = (normalize(np_img-decoded_img))
+show(diff)
 
 cv2.imwrite("output/comparison_img.png", stacked_img)
 cv2.imwrite("output/np_img.png", np_img)
 cv2.imwrite("output/decoded_img.png", decoded_img)
+cv2.imwrite("output/squirrel_diff.png", diff)
 
 
