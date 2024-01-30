@@ -18,7 +18,15 @@ RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, 
 ## Images
 VAE Example Image - https://towardsdatascience.com/stable-diffusion-using-hugging-face-501d8dbdd8
 
-VAE Test Image - https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg
+VAE Test Image 1 - [Squirrel](https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg)
+
+VAE Test Image 2 - [Rockefeller Center](https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg/798px-View_of_Empire_State_Building_from_Rockefeller_Center_New_York_City_dllu.jpg)
+
+VAE Test Image 3 - [Neon](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Neon.JPG/799px-Neon.JPG)
+
+VAE Test Image 4 - [Starry Night](https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/757px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg)
+
+VAE Test Image 5 - [Alto Saxophone](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alto_saxophone-E_1685-IMG_7092-gradient.jpg/600px-Alto_saxophone-E_1685-IMG_7092-gradient.jpg)
 
 ## Libraries
 Diffusers Library - https://github.com/huggingface/diffusers
