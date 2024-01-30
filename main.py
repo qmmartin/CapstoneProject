@@ -10,8 +10,9 @@ from vae_module import (
     matplot_show,
     restack,
     side_by_side,
-    compress_and_save,
+    vae_compress,
     load_np,
+    jpeg_compress,
 )
 
 
@@ -29,11 +30,13 @@ art_img = load_img(art_link)
 sax_img = load_img(sax_link)
 
 scalar1 = 0.18215
-compress_and_save(animal_img, scalar1)
-compress_and_save(cityscape_img, scalar1)
-compress_and_save(text_img, scalar1)
-compress_and_save(art_img, scalar1)
-compress_and_save(sax_img, scalar1)
+vae_compress(animal_img, scalar1)
+vae_compress(cityscape_img, scalar1)
+vae_compress(text_img, scalar1)
+vae_compress(art_img, scalar1)
+vae_compress(sax_img, scalar1)
+
+jpeg_compress(animal_img)
 
 
 

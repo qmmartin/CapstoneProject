@@ -6,6 +6,7 @@ from PIL import Image
 from diffusers import AutoencoderKL
 from fastdownload import FastDownload  
 from torchvision import transforms as tfms
+import io
 from friqa_module import (
     ssim_iqa,
     mse_iqa,
@@ -172,11 +173,26 @@ def latents_to_pil(latents, scalar):
     pil_images = [Image.fromarray(image) for image in images]        
     return pil_images
 
+def pil_to_jpeg(img):
+    quality = max(0, min(100, 100))
+    compressed_image_data = io.BytesIO()
+    img.save(compressed_image_data, format='JPEG', quality=quality)
+    compressed_image_data.seek(0)
+    compressed_image = Image.open(compressed_image_data)
+    jpeg_np = np.array(compressed_image)
+    jpeg_np = jpeg_np[:,:,::-1]
+
+    return jpeg_np
+
+
+# Global Variables
 count=0
+jpeg_count=0
 
 # Other functions
 
-def compress_and_save(img, scalar):
+# Combines previous functions into a single function that performs VAE compression and saves the resulting images.
+def vae_compress(img, scalar):
     global count
 
     if not isinstance(img, Image.Image):
@@ -208,5 +224,34 @@ def compress_and_save(img, scalar):
     ssim_iqa(np_img, decoded_img)
     mse_iqa(np_img, decoded_img)
     psnr_iqa(np_img, decoded_img)
+
+
+# Combines previous functions into a single function that performs JPEG compression and saves the resulting images.
+def jpeg_compress(img):
+    global count
+    
+    if not isinstance(img, Image.Image):
+        img = np_to_pil(img)
+    img = img.resize((512,512))
+
+    np_img = pil_to_np(img)
+
+    decoded_img = pil_to_jpeg(img)
+    compare_img = side_by_side(np_img, decoded_img)
+
+    count = count+1
+
+    img1 = (f"output/np_img{count:02}.png")
+    img2 = (f"output/decoded_img{count:02}.png")
+    img3 = (f"output/comparison_img{count:02}.png")
+
+    cv2.imwrite(img1, np_img)
+    cv2.imwrite(img2, decoded_img)
+    cv2.imwrite(img3, compare_img)
+
+    ssim_iqa(np_img, decoded_img)
+    mse_iqa(np_img, decoded_img)
+    psnr_iqa(np_img, decoded_img)
+
 
 
