@@ -1,18 +1,22 @@
 # Capstone Science Fair Project
-Using Stable Diffusion's Variational Autoencoders for Image Compression.
+Using Stable Diffusion's Variational Autoencoders for Lossy Image Compression.
 
 <img src="Images\vae_example.png" width="800">
 
 This project is currently a work in progress.
 
-The ultimate goal of this project is to be able to compress images while maintaining the same quality of the original image and avoiding the introduction of artifacts.
+The ultimate goal of this project is to be able to compress images while maintaining highly similar quality to the original image and avoiding the introduction of artifacts.
 
 RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, specifically the lower storage-intensive 'pruned-emaonly' weight.
 
+The scalar used frequently in the code is from [High-Resolution Image Synthesis with Latent Diffusion Models](https://arxiv.org/abs/2112.10752) and serves as the inverse standard deviation for the latents of the Variational Autoencoder used in Stable Diffusion 1.5.
+
 # Features
-- Img2img compression
+- Img2img VAE compression
+- PNG compression
+- WebP compression
 - File size reduction 
-- Image enhancement
+- Latent representation
 
 # Credits 
 ## Images
@@ -29,9 +33,15 @@ VAE Test Image 4 - [Starry Night](https://upload.wikimedia.org/wikipedia/commons
 VAE Test Image 5 - [Alto Saxophone](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alto_saxophone-E_1685-IMG_7092-gradient.jpg/600px-Alto_saxophone-E_1685-IMG_7092-gradient.jpg)
 
 ## Libraries
+OpenCV - https://opencv.org
+
+NumPy - https://numpy.org
+
 Diffusers Library - https://github.com/huggingface/diffusers
 
 Transformers Library - https://github.com/huggingface/transformers
+
+FastDownload - https://pypi.org/project/fastdownload/
 
 
 
