@@ -145,3 +145,9 @@ Continued drafting data and results, added a line to vae_compression.py that wil
 ## 1-30-24
 Updated README to include image links and more info about the project.
 
+Added JPEG Compression Functionality.
+
+Added WebP Compression Functionality.
+
+Created JPEG and WebP versions of each image and saved them to the files.
+

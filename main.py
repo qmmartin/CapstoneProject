@@ -13,6 +13,8 @@ from vae_module import (
     vae_compress,
     load_np,
     jpeg_compress,
+    webp_compress,
+    pil_to_webp,
 )
 
 
@@ -37,6 +39,17 @@ vae_compress(art_img, scalar1)
 vae_compress(sax_img, scalar1)
 
 jpeg_compress(animal_img)
+jpeg_compress(cityscape_img)
+jpeg_compress(text_img)
+jpeg_compress(art_img)
+jpeg_compress(sax_img)
+
+webp_compress(animal_img)
+webp_compress(cityscape_img)
+webp_compress(text_img)
+webp_compress(art_img)
+webp_compress(sax_img)
+
 
 
 
