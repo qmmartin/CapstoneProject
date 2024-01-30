@@ -33,15 +33,17 @@ VAE Test Image 4 - [Starry Night](https://upload.wikimedia.org/wikipedia/commons
 VAE Test Image 5 - [Alto Saxophone](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Alto_saxophone-E_1685-IMG_7092-gradient.jpg/600px-Alto_saxophone-E_1685-IMG_7092-gradient.jpg)
 
 ## Libraries
-OpenCV - https://opencv.org
+OpenCV Library - https://opencv.org
 
-NumPy - https://numpy.org
+NumPy Library - https://numpy.org
 
 Diffusers Library - https://github.com/huggingface/diffusers
 
 Transformers Library - https://github.com/huggingface/transformers
 
-FastDownload - https://pypi.org/project/fastdownload/
+FastDownload Library - https://pypi.org/project/fastdownload/
+
+IO Library - https://www.askpython.com/python-modules/python-io-module
 
 
 

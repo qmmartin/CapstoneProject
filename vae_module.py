@@ -7,7 +7,6 @@ from diffusers import AutoencoderKL
 from fastdownload import FastDownload  
 from torchvision import transforms as tfms
 import io
-import imageio
 from friqa_module import (
     ssim_iqa,
     mse_iqa,
