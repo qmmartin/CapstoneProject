@@ -139,5 +139,15 @@ Added new functions to friqa_module.py that will perform MSE and PSNR FR-IQA on 
 ## 12-13-23
 Started a draft of the data and results section of my paper and graphed the results of the FR-IQA methods for each image.
 
-## 12=14-23 
+## 12-14-23 
 Continued drafting data and results, added a line to vae_compression.py that will take the diff of the new and decoded image and save it.
+
+## 1-30-24
+Updated README to include image links and more info about the project.
+
+Added JPEG Compression Functionality.
+
+Added WebP Compression Functionality.
+
+Created JPEG and WebP versions of each image and saved them to the files.
+
