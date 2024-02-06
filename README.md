@@ -45,6 +45,8 @@ FastDownload Library - https://pypi.org/project/fastdownload/
 
 IO Library - https://www.askpython.com/python-modules/python-io-module
 
+Pandas Library - https://pandas.pydata.org/docs/getting_started/install.html
+
 
 
 

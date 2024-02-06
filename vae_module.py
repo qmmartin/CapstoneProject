@@ -150,7 +150,6 @@ def pil_to_latents(image, scalar):
 # Converts an image from latent representation to NumPy array
 def latents_to_np(latents, scalar):
     vae = load_vae()
-    scalar = 0.18215
     latents = (1 / scalar) * latents
     with torch.no_grad():
         image = vae.decode(latents).sample

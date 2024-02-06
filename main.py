@@ -16,6 +16,9 @@ from vae_module import (
     webp_compress,
     pil_to_webp,
 )
+from friqa_module import (
+    record_data
+)
 
 
 animal_link = 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Squirrel_posing.jpg/717px-Squirrel_posing.jpg'
@@ -49,6 +52,8 @@ webp_compress(cityscape_img)
 webp_compress(text_img)
 webp_compress(art_img)
 webp_compress(sax_img)
+
+record_data()
 
 
 

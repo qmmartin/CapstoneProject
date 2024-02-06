@@ -159,3 +159,6 @@ Added WebP Compression Functionality.
 
 Created JPEG and WebP versions of each image and saved them to the files.
 
+## 2-5-24
+Added code to friqa_module.py that outputs the results of the friqas to an excel spreadsheet.
+
