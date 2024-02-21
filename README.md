@@ -3,8 +3,6 @@ Using Stable Diffusion's Variational Autoencoders for Lossy Image Compression.
 
 <img src="Images\vae_example.png" width="800">
 
-This project is currently a work in progress.
-
 The ultimate goal of this project is to be able to compress images while maintaining highly similar quality to the original image and avoiding the introduction of artifacts.
 
 RunwayML's Stable Diffusion v1.5 was utilized for the purposes of this project, specifically the lower storage-intensive 'pruned-emaonly' weight.

@@ -162,3 +162,11 @@ Created JPEG and WebP versions of each image and saved them to the files.
 ## 2-5-24
 Added code to friqa_module.py that outputs the results of the friqas to an excel spreadsheet.
 
+Graphed data in excel and added file size data to graph as well.
+
+## 2-14-24
+Finished project paper and poster.
+
+## 2-20-24
+Updated README to reflect finalized project.
+
